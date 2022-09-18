@@ -30,15 +30,15 @@ export interface CategoryDetails {
 }
 
 export interface Assignment {
-  name: string;
-  grade: string;
+  name?: string;
+  grade?: number;
   dropped: boolean;
-  assign: string;
-  due: string;
-  scale: number;
-  max: number;
-  count: number;
-  note: string;
+  assign?: string;
+  due?: string;
+  scale?: number;
+  max?: number;
+  count?: number;
+  note?: string;
   error: boolean;
 }
 
