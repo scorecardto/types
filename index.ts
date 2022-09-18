@@ -18,7 +18,7 @@ export interface CourseResponse {
 }
 
 export interface Category extends CategoryDetails {
-  assignments: CategoryDetails[];
+  assignments: Assignment[];
 }
 
 export interface CategoryDetails {
