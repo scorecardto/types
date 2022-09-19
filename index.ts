@@ -58,4 +58,4 @@ export interface AssignmentsAllCoursesResponse {
   courses: CourseAssignments[];
 }
 
-export type AllContentResponse = AssignmentsAlCoursesResponse;
+export type AllContentResponse = AssignmentsAllCoursesResponse;
