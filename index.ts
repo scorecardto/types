@@ -55,5 +55,5 @@ export interface CourseAssignmentsResponse {
 export interface AssignmentsAllCoursesResponse {
   sessionId: string;
   referer: string;
-  categories: CourseAssignments[];
+  courses: CourseAssignments[];
 }
