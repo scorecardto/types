@@ -51,3 +51,9 @@ export interface CourseAssignmentsResponse {
   referer: string;
   categories: Category[];
 }
+
+export interface AssignmentsAllCoursesResponse {
+  sessionId: string;
+  referer: string;
+  categories: CourseAssignments[];
+}
