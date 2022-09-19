@@ -10,6 +10,10 @@ export interface Course {
   grades: (CourseGrade | null)[];
 }
 
+export interface CourseAssignments extends Course {
+  categories: CategoryDetails[];
+}
+
 export interface CourseResponse {
   courses: Course[];
   sessionId: string;
