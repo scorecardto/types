@@ -57,3 +57,5 @@ export interface AssignmentsAllCoursesResponse {
   referer: string;
   courses: CourseAssignments[];
 }
+
+export type AllContentResponse = AssignmentsAlCoursesResponse;
