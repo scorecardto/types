@@ -58,4 +58,9 @@ export interface AssignmentsAllCoursesResponse {
   courses: CourseAssignments[];
 }
 
+export interface GradebookRecord {
+  date: number;
+  data: CourseAssignments[];
+}
+
 export type AllContentResponse = AssignmentsAllCoursesResponse;
