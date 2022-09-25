@@ -64,4 +64,6 @@ export interface GradebookRecord {
   data: CourseAssignments[];
 }
 
-export type AllContentResponse = AssignmentsAllCoursesResponse;
+export interface AllContentResponse extends AssignmentsAllCoursesResponse {
+   gradingPeriods: string[];
+};
