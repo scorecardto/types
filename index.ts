@@ -59,6 +59,7 @@ export interface AssignmentsAllCoursesResponse {
 }
 
 export interface GradebookRecord {
+  gradingPeriods: string[];
   date: number;
   data: CourseAssignments[];
 }
