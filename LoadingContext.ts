@@ -10,7 +10,7 @@ export const LoadingContext = createContext<LoadingProvider>({
   },
 });
 
-export type LoadingProvider = {
+export interface LoadingProvider {
   loading: boolean;
   setLoading: Dispatch<SetStateAction<boolean>>;
   reloadContent: () => void;
