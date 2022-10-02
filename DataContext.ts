@@ -13,7 +13,7 @@ export const DataContext = createContext<DataProvider>({
   },
 });
 
-export type DataProvider = {
+export interface DataProvider {
   gradingPeriod: number;
   setGradingPeriod: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
