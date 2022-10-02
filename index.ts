@@ -1,3 +1,40 @@
+import { createContext, Dispatch, SetStateAction } from "react";
+
+export const LoadingContext = createContext<LoadingProvider>({
+  loading: false,
+  setLoading: () => {
+    /* do nothing */
+  },
+  reloadContent: () => {
+    /* do nothing */
+  },
+});
+
+export interface LoadingProvider {
+  loading: boolean;
+  setLoading: Dispatch<SetStateAction<boolean>>;
+  reloadContent: () => void;
+};
+
+
+export const DataContext = createContext<DataProvider>({
+  data: null,
+  setData: () => {
+    /* do nothing */
+  },
+  gradingPeriod: 0,
+  setGradingPeriod: () => {
+    /* do nothing */
+  },
+});
+
+export interface DataProvider {
+  gradingPeriod: number;
+  setGradingPeriod: Dispatch<SetStateAction<number>>;
+  data: GradebookRecord | null;
+  setData: Dispatch<SetStateAction<GradebookRecord | null>>;
+};
+
 export interface CourseGrade {
   value: string;
   key: string;
