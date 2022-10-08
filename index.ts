@@ -105,11 +105,7 @@ export interface AllContentResponse extends AssignmentsAllCoursesResponse {
    gradingPeriods: string[];
 };
 
-export interface SetupStateResponse {
+export interface SetupState {
   username: string;
   hasPassword: boolean;
-}
-
-export interface HasValidLoginResponse {
-  valid: boolean;
 }
