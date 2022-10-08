@@ -111,18 +111,18 @@ export interface SetupState {
   hasPassword: boolean;
 }
 
-export const SetupStateContext = createContext<SetupStateProvider>({
+export const SetupContext = createContext<SetupProvider>({
   setup: {
     host: "",
     username: "",
     hasPassword: false,
   },
-  setupState: () => {
+  setSetup: () => {
     // do nothing
   }
 });
 
-export interface SetupStateProvider {
+export interface SetupProvider {
   setup: SetupState;
   setSetup: Dispatch<SetStateAction<SetupState>>;
 };
