@@ -104,3 +104,12 @@ export interface GradebookRecord {
 export interface AllContentResponse extends AssignmentsAllCoursesResponse {
    gradingPeriods: string[];
 };
+
+export interface SetupStateResponse {
+  username: string;
+  hasPassword: boolean;
+}
+
+export interface HasValidLoginResponse {
+  valid: boolean;
+}
