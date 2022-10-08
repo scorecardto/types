@@ -106,6 +106,7 @@ export interface AllContentResponse extends AssignmentsAllCoursesResponse {
 };
 
 export interface SetupState {
+  host: string;
   username: string;
   hasPassword: boolean;
 }
