@@ -111,12 +111,12 @@ export interface SetupState {
   hasPassword: boolean;
 }
 
-export const SetupContext = createContext<SetupContextProvider>({
-  setup: null,
-  setSetup: () => {},
-});
+// export const SetupContext = createContext<SetupContextProvider>({
+//   setup: null,
+//   setSetup: () => {},
+// });
 
-export interface SetupContextProvider {
-  setup: SetupState | null;
-  setSetup: Dispatch<SetStateAction<SetupState | null>>;
-}
+// export interface SetupContextProvider {
+//   setup: SetupState | null;
+//   setSetup: Dispatch<SetStateAction<SetupState | null>>;
+// }
