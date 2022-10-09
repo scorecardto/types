@@ -35,6 +35,18 @@ export interface DataProvider {
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
 };
 
+export const SetupContext = createContext<SetupProvider>({
+  setup: null,
+  setSetup: () => {
+   /* do nothing */
+  },
+});
+
+export interface SetupProvider {
+  setup: SetupState | null;
+  setSetup: Dispatch<SetStateAction<SetupState | null>>;
+};
+
 export interface CourseGrade {
   value: string;
   key: string;
@@ -110,19 +122,3 @@ export interface SetupState {
   username: string;
   hasPassword: boolean;
 }
-
-export const SetupContext = createContext<SetupProvider>({
-  setup: {
-    host: "",
-    username: "",
-    hasPassword: false,
-  },
-  setSetup: () => {
-    // do nothing
-  }
-});
-
-export interface SetupProvider {
-  setup: SetupState;
-  setSetup: Dispatch<SetStateAction<SetupState>>;
-};
