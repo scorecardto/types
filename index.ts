@@ -1,5 +1,22 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 
+
+export const SetupContext = createContext<SetupProvider>({
+  loading: false,
+  setLoading: () => {
+    /* do nothing */
+  },
+  reloadContent: () => {
+    /* do nothing */
+  },
+});
+
+export interface SetupProvider {
+  loading: boolean;
+  setLoading: Dispatch<SetStateAction<boolean>>;
+  reloadContent: () => void;
+};
+
 export const LoadingContext = createContext<LoadingProvider>({
   loading: false,
   setLoading: () => {
@@ -34,18 +51,6 @@ export interface DataProvider {
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
 };
-
-// export const SetupContext = createContext<SetupProvider>({
-//   setup: null,
-//   setSetup: () => {
-//    /* do nothing */
-//   },
-// });
-
-// export interface SetupProvider {
-//   setup: SetupState | null;
-//   setSetup: Dispatch<SetStateAction<SetupState | null>>;
-// };
 
 export interface CourseGrade {
   value: string;
