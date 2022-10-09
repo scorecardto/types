@@ -1,23 +1,6 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 
-
-// export const SetupContext = createContext<SetupProvider>({
-//   loading: false,
-//   setLoading: () => {
-//     /* do nothing */
-//   },
-//   reloadContent: () => {
-//     /* do nothing */
-//   },
-// });
-
-// export interface SetupProvider {
-//   loading: boolean;
-//   setLoading: Dispatch<SetStateAction<boolean>>;
-//   reloadContent: () => void;
-// };
-
-export const SetupContext = createContext<SetupProvider>({
+export const LoadingContext = createContext<LoadingProvider>({
   loading: false,
   setLoading: () => {
     /* do nothing */
@@ -27,7 +10,7 @@ export const SetupContext = createContext<SetupProvider>({
   },
 });
 
-export interface SetupProvider {
+export interface LoadingProvider {
   loading: boolean;
   setLoading: Dispatch<SetStateAction<boolean>>;
   reloadContent: () => void;
