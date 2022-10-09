@@ -36,15 +36,15 @@ export interface DataProvider {
 };
 
 export const SetupContext = createContext<SetupProvider>({
-  setup: null,
-  setSetup: () => {
-   /* do nothing */
+  data: null,
+  setData: () => {
+    /* do nothing */
   },
 });
 
 export interface SetupProvider {
-  setup: SetupState | null;
-  setSetup: Dispatch<SetStateAction<SetupState | null>>;
+  data: GradebookRecord | null;
+  setData: Dispatch<SetStateAction<GradebookRecord | null>>;
 };
 
 export interface CourseGrade {
