@@ -22,18 +22,24 @@ export const DataContext = createContext<DataProvider>({
   setData: () => {
     /* do nothing */
   },
-  gradingPeriod: 0,
-  setGradingPeriod: () => {
+  gradeCategory: 0,
+  setGradeCategory: () => {
     /* do nothing */
   },
 });
 
 export interface DataProvider {
-  gradingPeriod: number;
-  setGradingPeriod: Dispatch<SetStateAction<number>>;
+  gradeCategory: number;
+  setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
 };
+
+export interface GradebookRecord {
+  gradeCategoryNames: string[];
+  date: number;
+  courses: Course[];
+}
 
 export interface CourseGrade {
   value: string;
@@ -45,29 +51,16 @@ export interface Course {
   key: string;
   name: string;
   grades: (CourseGrade | null)[];
+  gradeCategories?: GradeCategory[]; // sometimes don't want to send this
 }
 
-export interface CourseAssignments extends Course {
-  categories: CategoryDetails[];
-}
-
-export interface CourseResponse {
-  courses: Course[];
-  sessionId: string;
-  referer: string;
-  columnNames: string[];
-}
-
-export interface Category extends CategoryDetails {
-  assignments: Assignment[];
-}
-
-export interface CategoryDetails {
+export interface GradeCategory {
   name: string;
   id: string;
   average: string;
   weight: number;
   error: boolean;
+  assignments?: Assignment[]; // sometimes don't want to send this
 }
 
 export interface Assignment {
@@ -83,26 +76,27 @@ export interface Assignment {
   error: boolean;
 }
 
-export interface CourseAssignmentsResponse {
+export interface CourseResponse {
+  courses: Course[];
   sessionId: string;
   referer: string;
-  categories: Category[];
+  gradeCategoryNames: string[];
 }
 
-export interface AssignmentsAllCoursesResponse {
+export interface GradeCategoriesResponse {
   sessionId: string;
   referer: string;
-  courses: CourseAssignments[];
+  gradeCategories: GradeCategory[];
 }
 
-export interface GradebookRecord {
-  gradingPeriods: string[];
-  date: number;
-  data: CourseAssignments[];
+export interface AllCoursesResponse {
+  sessionId: string;
+  referer: string;
+  courses: Course[];
 }
 
-export interface AllContentResponse extends AssignmentsAllCoursesResponse {
-   gradingPeriods: string[];
+export interface AllContentResponse extends AllCoursesResponse {
+   gradeCategoryNames: string[];
 };
 
 export interface SetupState {
@@ -110,13 +104,3 @@ export interface SetupState {
   username: string;
   hasPassword: boolean;
 }
-
-// export const SetupContext = createContext<SetupContextProvider>({
-//   setup: null,
-//   setSetup: () => {},
-// });
-
-// export interface SetupContextProvider {
-//   setup: SetupState | null;
-//   setSetup: Dispatch<SetStateAction<SetupState | null>>;
-// }
