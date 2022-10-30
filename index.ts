@@ -34,7 +34,6 @@ export interface DataProvider {
   setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
-  gradeCategoryNames: string[];
 };
 
 export interface GradebookRecord {
