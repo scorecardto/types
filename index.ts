@@ -26,7 +26,6 @@ export const DataContext = createContext<DataProvider>({
   setGradeCategory: () => {
     /* do nothing */
   },
-  gradeCateogryNames: [],
 });
 
 export interface DataProvider {
