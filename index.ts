@@ -26,6 +26,7 @@ export const DataContext = createContext<DataProvider>({
   setGradeCategory: () => {
     /* do nothing */
   },
+  gradeCateogryNames: [],
 });
 
 export interface DataProvider {
@@ -33,6 +34,7 @@ export interface DataProvider {
   setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
+  gradeCateogryNames: string[];
 };
 
 export interface GradebookRecord {
