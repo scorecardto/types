@@ -65,7 +65,8 @@ export interface GradeCategory {
 
 export interface Assignment {
   name?: string;
-  grade?: number;
+  points?: number;
+  grade?: string;
   dropped: boolean;
   assign?: string;
   due?: string;
