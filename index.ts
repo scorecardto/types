@@ -30,7 +30,10 @@ export const DataContext = createContext<DataProvider>({
   },
   setCourseName: () => {
     /* do nothing */
-  }
+  },
+  setCourseNames: () => {
+    /* do nothing */
+  },
 });
 
 export interface DataProvider {
@@ -42,6 +45,9 @@ export interface DataProvider {
     [courseKey: string]: string;
   };
   setCourseName(key: string, name: string);
+  setCourseNames: Dispatch<SetStateAction<{ 
+    [courseKey: string]: string;
+  }>>;
 
 };
 
