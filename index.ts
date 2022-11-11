@@ -41,7 +41,7 @@ export interface DataProvider {
   courseNames: { 
     [courseKey: string]: string;
   };
-  setCourseName(arg0: string);
+  setCourseName(key: string, name: string);
 
 };
 
