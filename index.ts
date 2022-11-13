@@ -26,12 +26,11 @@ export const DataContext = createContext<DataProvider>({
   setGradeCategory: () => {
     /* do nothing */
   },
-  courseNames: {
-  },
-  setCourseName: () => {
-    /* do nothing */
-  },
-  setCourseNames: () => {
+});
+
+export const NotificationContext = createContext<NotificationProvider>({
+  notifications: [],
+  markRead: () => {
     /* do nothing */
   },
 });
@@ -41,14 +40,19 @@ export interface DataProvider {
   setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
-  courseNames: { 
-    [courseKey: string]: string;
-  };
-  setCourseName(key: string, name: string);
-  setCourseNames: Dispatch<SetStateAction<{ 
-    [courseKey: string]: string;
-  }>>;
+};
 
+export interface GradebookNotification {
+  icon: "RISE" | "FALL" | "NEUTRAL";
+  title: string;
+  message: string;
+  date: number;
+  read: boolean;
+}
+
+export interface NotificationProvider {
+  notifications: Notification[];
+  markRead(): void;
 };
 
 export interface GradebookRecord {
