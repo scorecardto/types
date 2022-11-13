@@ -51,7 +51,7 @@ export interface GradebookNotification {
 }
 
 export interface NotificationProvider {
-  notifications: Notification[];
+  notifications: GradebookNotification[];
   markRead(): void;
 };
 
