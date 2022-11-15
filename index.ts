@@ -68,6 +68,7 @@ export interface CourseGrade {
 };
 
 export interface Course {
+  displayName: string;
   key: string;
   name: string;
   grades: (CourseGrade | null)[];
