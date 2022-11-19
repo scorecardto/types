@@ -60,6 +60,7 @@ export interface GradebookNotification {
 
 export interface NotificationProvider {
   notifications: GradebookNotification[];
+  setNotifications: Dispatch<SetStateAction<GradebookNotification[]>>;
   unreadNotifications: GradebookNotification[];
   markRead(): void;
 };
