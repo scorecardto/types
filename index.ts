@@ -34,6 +34,7 @@ export const DataContext = createContext<DataProvider>({
 
 export const NotificationContext = createContext<NotificationProvider>({
   notifications: [],
+  unreadNotifications: [],
   markRead: () => {
     /* do nothing */
   },
@@ -58,6 +59,7 @@ export interface GradebookNotification {
 
 export interface NotificationProvider {
   notifications: GradebookNotification[];
+  unreadNotifications: GradebookNotification[];
   markRead(): void;
 };
 
