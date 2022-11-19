@@ -50,6 +50,7 @@ export interface DataProvider {
 };
 
 export interface GradebookNotification {
+  id?: number;
   icon: "RISE" | "FALL" | "NEUTRAL";
   title: string;
   message: string;
