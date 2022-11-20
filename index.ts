@@ -38,6 +38,9 @@ export const NotificationContext = createContext<NotificationProvider>({
   markRead: () => {
     /* do nothing */
   },
+  setNotifications: () => {
+    /* do nothing */
+  }
 });
 
 export interface DataProvider {
