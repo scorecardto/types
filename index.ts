@@ -1,7 +1,7 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 
 export type Appearance = "LIGHT" | "DARK" | "SYSTEM";
-export type AccentColor = "BLUE";
+export type AccentColor = "BLUE" | "PINK";
 export type SpoilerMode = boolean;
 export type CheckGradesInterval = 10 | 20 | 30 | 45 | 60 | 180 | 360;
 export type UsePushNotifications  = boolean;
