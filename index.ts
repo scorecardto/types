@@ -33,6 +33,10 @@ export const SettingsContext = createContext<SettingsProvider>({
   setDeleteNotificationsAfter: () => {
     /* do nothing */
   },
+  loaded: false,
+  setLoaded: () => {
+    /* do nothing */
+  }
 });
 
 export interface Settings {
@@ -50,6 +54,9 @@ export interface SettingsProvider extends Settings {
   setCheckGradesInterval: Dispatch<SetStateAction<CheckGradesInterval>>;
   setUsePushNotifications: Dispatch<SetStateAction<UsePushNotifications>>;
   setDeleteNotificationsAfter: Dispatch<SetStateAction<DeleteNotificationsAfter>>;
+
+  loaded: boolean;
+  setLoaded: Dispatch<SetStateAction<boolean>>;
 };
 
 export const LoadingContext = createContext<LoadingProvider>({
