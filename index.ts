@@ -35,18 +35,20 @@ export const SettingsContext = createContext<SettingsProvider>({
   },
 });
 
-export interface SettingsProvider {
+export interface Settings {
   appearance: Appearance;
-  setAppearance: Dispatch<SetStateAction<Appearance>>;
   accentColor: AccentColor;
-  setAccentColor: Dispatch<SetStateAction<AccentColor>>;
   spoilerMode: SpoilerMode;
-  setSpoilerMode: Dispatch<SetStateAction<SpoilerMode>>;
   checkGradesInterval: CheckGradesInterval;
-  setCheckGradesInterval: Dispatch<SetStateAction<CheckGradesInterval>>;
   usePushNotifications: UsePushNotifications;
-  setUsePushNotifications: Dispatch<SetStateAction<UsePushNotifications>>;
   deleteNotificationsAfter: DeleteNotificationsAfter;
+}
+export interface SettingsProvider extends Settings {
+  setAppearance: Dispatch<SetStateAction<Appearance>>;
+  setAccentColor: Dispatch<SetStateAction<AccentColor>>;
+  setSpoilerMode: Dispatch<SetStateAction<SpoilerMode>>;
+  setCheckGradesInterval: Dispatch<SetStateAction<CheckGradesInterval>>;
+  setUsePushNotifications: Dispatch<SetStateAction<UsePushNotifications>>;
   setDeleteNotificationsAfter: Dispatch<SetStateAction<DeleteNotificationsAfter>>;
 };
 
