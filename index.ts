@@ -1,5 +1,55 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 
+export type Appearance = "LIGHT" | "DARK" | "SYSTEM";
+export type AccentColor = "BLUE";
+export type SpoilerMode = boolean;
+export type CheckGradesInterval = 10 | 20 | 30 | 45 | 60 | 120 | 1440;
+export type UsePushNotifications  = boolean;
+export type DeleteNotificationsAfter  = 0 | 2 | 5 | 14 | 30;
+
+
+export const SettingsContext = createContext<SettingsProvider>({
+  appearance: "LIGHT",
+  setAppearance: () => {
+    /* do nothing */
+  },
+  accentColor: "BLUE",
+  setAccentColor: () => {
+    /* do nothing */
+  },
+  spoilerMode: false,
+  setSpoilerMode: () => {
+    /* do nothing */
+  },
+  checkGradesInterval: 10,
+  setCheckGradesInterval: () => {
+    /* do nothing */
+  },
+  usePushNotifications: false,
+  setUsePushNotifications: () => {
+    /* do nothing */
+  },
+  deleteNotificationsAfter: 0,
+  setDeleteNotificationsAfter: () => {
+    /* do nothing */
+  },
+});
+
+export interface SettingsProvider {
+  appearance: Appearance;
+  setAppearance: Dispatch<SetStateAction<Appearance>>;
+  accentColor: AccentColor;
+  setAccentColor: Dispatch<SetStateAction<AccentColor>>;
+  spoilerMode: SpoilerMode;
+  setSpoilerMode: Dispatch<SetStateAction<SpoilerMode>>;
+  checkGradesInterval: CheckGradesInterval;
+  setCheckGradesInterval: Dispatch<SetStateAction<CheckGradesInterval>>;
+  usePushNotifications: UsePushNotifications;
+  setUsePushNotifications: Dispatch<SetStateAction<UsePushNotifications>>;
+  deleteNotificationsAfter: DeleteNotificationsAfter;
+  setDeleteNotificationsAfter: Dispatch<SetStateAction<DeleteNotificationsAfter>>;
+};
+
 export const LoadingContext = createContext<LoadingProvider>({
   loading: false,
   setLoading: () => {
