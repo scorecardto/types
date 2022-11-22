@@ -131,6 +131,7 @@ export interface GradebookRecord {
   gradeCategoryNames: string[];
   date: number;
   courses: Course[];
+  gradeCategory: number;
 }
 
 export interface CourseGrade {
