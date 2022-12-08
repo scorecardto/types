@@ -118,6 +118,7 @@ export interface GradebookNotification {
   message: string;
   date: number;
   read: boolean;
+  course?: string;
 }
 
 export interface NotificationProvider {
