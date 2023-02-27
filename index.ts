@@ -85,8 +85,8 @@ export const DataContext = createContext<DataProvider>({
   setGradeCategory: () => {
     /* do nothing */
   },
-  courseDisplayNames: {},
-  setCourseDisplayNames: () => {
+  courseSettings: {},
+  setCourseSettings: () => {
     /* do nothing */
   },
 });
@@ -107,9 +107,15 @@ export interface DataProvider {
   setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
-  courseDisplayNames: { [key: string]: string };
-  setCourseDisplayNames: Dispatch<SetStateAction<{ [key: string]: string }>>;
+  courseDisplayNames: { [key: string]: CourseSettings };
+  setCourseDisplayNames: Dispatch<SetStateAction<{ [key: string]: CourseSettings }>>;
 };
+
+export interface CourseSettings {
+  displayName?: string;
+  lastUpdated?: number;
+  hidden?: boolean;
+}
 
 export interface GradebookNotification {
   id?: number;
