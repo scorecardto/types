@@ -107,8 +107,8 @@ export interface DataProvider {
   setGradeCategory: Dispatch<SetStateAction<number>>;
   data: GradebookRecord | null;
   setData: Dispatch<SetStateAction<GradebookRecord | null>>;
-  courseDisplayNames: { [key: string]: CourseSettings };
-  setCourseDisplayNames: Dispatch<SetStateAction<{ [key: string]: CourseSettings }>>;
+  courseSettings: { [key: string]: CourseSettings };
+  setCourseSettings: Dispatch<SetStateAction<{ [key: string]: CourseSettings }>>;
 };
 
 export interface CourseSettings {
