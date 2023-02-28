@@ -89,6 +89,10 @@ export const DataContext = createContext<DataProvider>({
   setCourseSettings: () => {
     /* do nothing */
   },
+  courseOrder: null,
+  setCourseOrder: () => {
+    /* do nothing */
+  },
 });
 
 export const NotificationContext = createContext<NotificationProvider>({
