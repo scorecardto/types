@@ -121,6 +121,8 @@ export interface CourseSettings {
   displayName?: string;
   lastUpdated?: number;
   hidden?: boolean;
+  accentColor?: string;
+  glyph?: string;
 }
 
 export interface GradebookNotification {
