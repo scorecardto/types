@@ -139,6 +139,7 @@ export interface NotificationProvider {
   notifications: GradebookNotification[];
   setNotifications: Dispatch<SetStateAction<GradebookNotification[]>>;
   unreadNotifications: GradebookNotification[];
+  // @ts-ignore
   markRead(port?: chrome.runtime.Port): void;
 };
 
