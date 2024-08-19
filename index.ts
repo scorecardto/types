@@ -213,3 +213,31 @@ export interface SetupState {
   username: string;
   hasPassword: boolean;
 }
+
+export interface ClubBase {
+  name: string;
+  code: string;
+  picture?: string;
+  heroColor?: string;
+}
+
+export interface Club extends ClubBase {
+  isMember: boolean;
+  isOwner: boolean;
+  memberCount: number;
+  bio?: string;
+  link?: string;
+  posts: ClubPost[];
+  omitInClubList?: boolean;
+}
+
+export interface ClubPost {
+  club: ClubBase
+  content: string;
+  postDate: number;
+  eventDate?: number;
+  picture?: string;
+  link?: string;
+}
+
+
