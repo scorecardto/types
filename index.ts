@@ -220,6 +220,7 @@ export interface ClubBase {
   code: string;
   picture?: string;
   heroColor?: string;
+  emoji?: string;
 }
 
 export interface Club extends ClubBase {
