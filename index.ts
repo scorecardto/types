@@ -217,7 +217,8 @@ export interface SetupState {
 
 export interface ClubBase {
   name: string;
-  code: string;
+  clubCode: string;
+  internalCode: string;
   picture?: string;
   heroColor?: string;
   emoji?: string;
