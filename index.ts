@@ -243,4 +243,10 @@ export interface ClubPost {
   link?: string;
 }
 
+export type PromotionOption = "BASIC" | "PROMOTE";
+
+export interface ClubPostInternal extends ClubPost {
+  promotionOption: PromotionOption;
+}
+
 
