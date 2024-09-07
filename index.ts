@@ -221,6 +221,7 @@ export interface ClubBase {
   internalCode: string;
   picture?: string;
   verified?: boolean;
+  official?: boolean;
   heroColor?: string;
   emoji?: string;
 }
