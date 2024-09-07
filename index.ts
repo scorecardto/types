@@ -220,6 +220,7 @@ export interface ClubBase {
   clubCode: string;
   internalCode: string;
   picture?: string;
+  verified?: boolean;
   heroColor?: string;
   emoji?: string;
 }
@@ -229,7 +230,6 @@ export interface Club extends ClubBase {
   isOwner: boolean;
   memberCount: number;
   bio?: string;
-  verified?: boolean;
   link?: string;
   posts: ClubPost[];
   omitInClubList?: boolean;
