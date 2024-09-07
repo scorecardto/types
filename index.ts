@@ -229,6 +229,7 @@ export interface Club extends ClubBase {
   isOwner: boolean;
   memberCount: number;
   bio?: string;
+  verified?: boolean;
   link?: string;
   posts: ClubPost[];
   omitInClubList?: boolean;
