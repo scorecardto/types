@@ -245,6 +245,14 @@ export interface ClubPost {
   link?: string;
 }
 
+export interface School {
+  uniqueName: string;
+  name: string;
+  displayName?: string;
+  district: string;
+  verified: boolean;
+}
+
 export type PromotionOption = "BASIC" | "PROMOTE";
 
 export interface ClubPostInternal extends ClubPost {
