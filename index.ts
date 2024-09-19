@@ -159,7 +159,7 @@ export interface CourseGrade {
 export interface Course {
   key: string;
   name: string;
-  teacher?: {name: string, email: string};
+  teacher?: {name: string, email?: string};
   room?: string;
   grades: (CourseGrade | null)[];
   gradeCategories?: GradeCategory[]; // sometimes don't want to send this
