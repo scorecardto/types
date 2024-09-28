@@ -261,4 +261,16 @@ export interface ClubPostInternal extends ClubPost {
   promotionOption: PromotionOption;
 }
 
+export interface ClubMembershipBase {
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  email?: string;
+}
 
+export interface ClubEnrollmentBase {
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  email?: string;
+}
