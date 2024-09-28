@@ -231,6 +231,8 @@ export interface ClubBase {
 export interface Club extends ClubBase {
   isMember: boolean;
   isOwner: boolean;
+  isManager?: boolean;
+  canManage?: boolean;
   memberCount: number;
   bio?: string;
   link?: string;
@@ -266,6 +268,7 @@ export interface ClubMembershipBase {
   lastName?: string;
   phone?: string;
   email?: string;
+  manager?: boolean;
 }
 
 export interface ClubEnrollmentBase {
