@@ -269,6 +269,8 @@ export interface ClubMembershipBase {
   phone?: string;
   email?: string;
   manager?: boolean;
+  owner?: boolean;
+  id?: number;
 }
 
 export interface ClubEnrollmentBase {
