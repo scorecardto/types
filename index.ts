@@ -168,8 +168,8 @@ export interface Course {
 export interface GradeCategory {
   name: string;
   id: string;
-  average?: string;
-  weight?: number;
+  average: string;
+  weight: number;
   error: boolean;
   assignments?: Assignment[]; // sometimes don't want to send this
 }
@@ -178,7 +178,7 @@ export interface Assignment {
   name?: string;
   points?: number;
   grade?: string;
-  dropped?: boolean;
+  dropped: boolean;
   assign?: string;
   due?: string;
   scale?: number;
