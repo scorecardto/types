@@ -168,8 +168,8 @@ export interface Course {
 export interface GradeCategory {
   name: string;
   id: string;
-  average: string;
-  weight: number;
+  average?: string;
+  weight?: number;
   error: boolean;
   assignments?: Assignment[]; // sometimes don't want to send this
 }
