@@ -178,7 +178,7 @@ export interface Assignment {
   name?: string;
   points?: number;
   grade?: string;
-  dropped: boolean;
+  dropped?: boolean;
   assign?: string;
   due?: string;
   scale?: number;
